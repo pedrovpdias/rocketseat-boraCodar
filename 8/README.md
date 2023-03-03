@@ -3,28 +3,28 @@
 ## O que aprendemos nesse desafio?
 
 * CSS
-    * [ ] Aplicar variável pelo atributo HTML
-    * [ ] Animations / `@keyframes`
+    * [x] Aplicar variável pelo atributo HTML
+    * [x] Animations / `@keyframes`
     * [x] `column-gap` / `row-gap`
     * [x] `grid-template-rows` / `grid-template-columns` / `grid-column` / `grid-auto-flow`
     * [x] `fit-content`
-    * [ ] `margin-top: auto`
-    * [ ] `place-content` / `align-self` / `justify-items` / `justify-content`
-    * [ ] Centralizar div com position / grid / flex / margin
-    * [ ] `:nth:child()` / `::before`
-    * [ ] `tranform` / `matrix()` / `rotate()`
-    * [ ] `stroke` / `dasharray` / `dashoffset` / `stroke-width` / `linecap`
-    * [ ] `fill`
-    * [ ] Responsividade / Mobile first / `@media`
-    * [ ] `clip-path` / `polygon`
-    * [ ] `linear-gradient()`
-    * [ ] `calc()`
+    * [x] `margin-top: auto`
+    * [x] `place-content` / `align-self` / `justify-items` / `justify-content`
+    * [x] Centralizar div com position / grid / flex / margin
+    * [x] `:nth:child()` / `::before`
+    * [x] `tranform` / `matrix()` / `rotate()`
+    * [x] `stroke` / `dasharray` / `dashoffset` / `stroke-width` / `linecap`
+    * [x] `fill`
+    * [x] Responsividade / Mobile first / `@media`
+    * [x] `clip-path` / `polygon`
+    * [x] `linear-gradient()`
+    * [x] `calc()`
 
 * SVG 
-    * [ ] `view-box`
-    * [ ] `circle`
-    * [ ] `cx` / `cy`
-    * [ ] `r`
-    * [ ] `stroke`
-    * [ ] `defs`
-    * [ ] `linearGradient`
+    * [x] `view-box`
+    * [x] `circle`
+    * [x] `cx` / `cy`
+    * [x] `r`
+    * [x] `stroke`
+    * [x] `defs`
+    * [x] `linearGradient`

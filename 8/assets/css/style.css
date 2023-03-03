@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6em;
+    font-family: 'Inter', sans-serif;
+
+    background-color: #292738;
+}
+
+#app {
+    column-gap: 3.2rem;
+    row-gap: 5.9rem;
+
+    place-content: center;
+
+    width: fit-content;
+    min-height: 100vh;
+    height: fit-content;
+
+    margin: auto;
+    place-content: center;
+    padding: 3.2rem;
+
+}
+
+.grid {
+    display: grid;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.box {
+    padding: 2.9rem 4.8rem;
+
+    background: #363447;
+    box-shadow: .3rem .4rem 2.6rem rgba(0, 0, 0, 0.25);
+    border-radius: 1.6rem;
+
+    color: white;
+    line-height: 160%;
+
+    gap: 3.2rem
+}
+
+.nps {
+    gap: 3.2rem
+}
+
+.top {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.middle {
+    place-content: center;
+    position: relative;
+}
+
+.middle .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    gap: 5px;
+}
+
+.middle .content h3 {
+    font-size: 3.4rem;
+}
+
+.bottom {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: 14px;
+    
+    margin-top: auto;
+}
+
+.bottom .item {
+    display: flex;
+    gap: 1rem;
+
+    align-items: center;
+}
+
+.bottom .item span:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.bottom .item span:nth-child(1)::before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+
+    background: #4a4556;
+    border-radius: 100%;
+}
+
+.sell .bottom .item:nth-of-type(2) span:nth-of-type(1)::before {
+    background: linear-gradient(121.94deg, #ce9ffc, #7367f0);
+}
+
+.target .bottom .item:nth-of-type(2) span:nth-of-type(1)::before {
+    background: linear-gradient(121.94deg, #df9780, #a66de9);;
+}
+
+.nps .middle {
+    height: 19.7rem;
+    place-content: center;
+    justify-items: center;
+
+    gap: 1.6rem;
+    color: #81fbb8;
+}
+
+.nps .bottom {
+    gap: 1rem
+}
+
+.weekly-sell {
+    gap: 3.2rem;
+}
+
+.weekly-sell .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.weekly-sell .wrapper .left {
+    gap: 3.2rem;
+    grid-auto-flow: column;
+}
+
+.weekly-sell .wrapper .left,
+.weekly .right {
+    flex: 1;
+}
+
+.weekly-sell .wrapper .left .grid {
+    gap: .8rem;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.weekly-sell .wrapper .left .grid span {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+
+    font-size: 14px;
+}
+
+.weekly-sell .wrapper .left .grid span::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: block;
+    clip-path: polygon(50% 20%, 0% 80%, 100% 80%);
+}
+
+.weekly-sell .wrapper .left .most-sell span::before {
+    background: linear-gradient(180deg, #81fbb8 0%, #28c76f);
+}
+
+.weekly-sell .wrapper .left .less-sell span::before {
+    background: linear-gradient(180deg, #ea5455 0%, #df9780);
+    transform:  matrix(1, 0, 0, -1, 0, 0)
+}
+
+.weekly-sell .wrapper .right .bars {
+    display: flex;
+    align-items: flex-end;
+
+    gap: calc(3vw + 1rem);
+    position: relative;
+}
+
+.weekly-sell .wrapper .right .bars::before {
+    content: "";
+    display: block;
+    height: .3rem;
+    width: 100%;
+    background-color: #4a4556;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 0;
+}
+
+.bars .bar-wrapper {
+    display: grid;
+    justify-items: center;
+    gap: .5rem;
+
+    grid-template-rows: 16rem 1.6rem;
+}
+
+.bars .bar-wrapper .bar {
+    width: 1.5rem;
+    height: var(--bar-height);
+    align-self: flex-end;
+
+    background: linear-gradient(180deg, #90f7ec 0%, #32ccbc 100%);
+    border-radius: 20px;
+    z-index: 1;
+
+    animation: setup-bar 1.5s;
+}
+
+@keyframes setup-bar {
+    0% {
+        height: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    #app {
+        grid-template-columns: 29.6rem max-content max-content;
+        grid-template-rows: max-content;
+    }
+
+    .box:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .weekly-sell .wrapper {
+        flex-direction: row;
+    }
+    
+    .weekly-sell .wrapper .left {
+        gap: 3.2rem;
+        grid-auto-flow: initial;
+    }
+
+    .weekly-sell .wrapper .right .bars {
+        gap: 5.9rem;
+    }
+}

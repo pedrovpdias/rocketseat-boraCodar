@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link type="text/css" rel="stylesheet" href="./style.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/charts.css" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
@@ -17,7 +19,7 @@
 <body>
     <div id="app" class="grid">
         <div class="box nps grid">
-            <div class="top">
+            <div class="top text-center">
                 NPS Geral
             </div>
             <div class="middle grid">
@@ -34,10 +36,53 @@
             </div>
         </div>
         <div class="box sell grid">
-            <div class="top">
+            <div class="top text-center">
                 Vendas fechadas
             </div>
-            <div class="middle"></div>
+            <div class="middle grid">
+                <svg 
+                    viewBox="0 0 236 236" 
+                    style="--percentage: 70"
+                >
+                    <circle 
+                        r="98.5" 
+                        cx="50%" cy="50%"
+                        opacity="0.1"
+                        stroke="#d9d9d9"
+                    />
+
+                    <circle 
+                        r="98.5"
+                        cx="50%" cy="50%"
+                        stroke="url(#vendasFechadas_stroke)"
+                    />
+
+                    <defs>
+                        <linearGradient
+                            id="vendasFechadas_stroke"
+                            x1="-9" y1="82" 
+                            x2="145" y2="178"
+                            gradientUnits="userSpaceOnUse"
+                        >
+                            <stop stop-color="#ce9ffc" />
+                            <stop 
+                                offset="1" 
+                                stop-color="#7367f0"
+                            />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <div class="content grid">
+                    <h3>
+                        70%
+                    </h3>
+                    <p>
+                        alcançada
+                    </p>
+                </div>
+
+            </div>
             <div class="bottom">
                 <div class="item">
                     <span>
@@ -58,10 +103,53 @@
             </div>
         </div>
         <div class="box target grid">
-            <div class="top">
+            <div class="top text-center">
                 Meta mensal
             </div>
-            <div class="middle"></div>
+            <div class="middle grid">
+                <svg 
+                    viewBox="0 0 235 235"
+                    style="--percentage: 90"
+                >
+                    <circle 
+                        r="98.5"
+                        cx="50%" cy="50%"
+                        opacity="0.1"
+                        stroke="#d9d9d9"
+                    />
+
+                    <circle 
+                        r="98.5"
+                        cx="50%" cy="50%"
+                        stroke="url(#metaMensal_stroke)"
+                    />
+
+                    <defs>
+                        <linearGradient
+                            id="metaMensal_stroke"
+                            x1="-9" y1="82"
+                            x2="145" y2="178"
+                            gradientUnits="userSpaceOnUse"
+                        >
+                            <stop stop-color="#df9780"/>
+                            <stop
+                                offset="1"
+                                stop-color="#a66de9"
+                            />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <div class="content grid">
+                    <h3>
+                        90%
+                    </h3>
+                    <p>
+                        alcançada
+                    </p>
+                </div>
+
+            </div>
             <div class="bottom">
                 <div class="item">
                     <span>
@@ -81,7 +169,104 @@
                 </div>
             </div>
         </div>
-        <!--div class="box"></div-->
+
+        <div class="box weekly-sell grid">
+            <div class="top">
+                Vendas por dia da semana
+            </div>
+
+            <div class="wrapper">
+                <div class="left grid">
+                    <div class="most-sell grid">
+                        <span>
+                            Dia com mais vendas
+                        </span>
+                        quarta-feira
+                    </div>
+                    <div class="less-sell grid">
+                        <span>
+                            Dia com menos vendas
+                        </span>
+                        domingo
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="bars">
+                        <div class="bar-wrapper">
+                            <div 
+                                class="bar"
+                                style="--bar-height: 3.9rem"
+                            ></div>
+                            <span>
+                                Dom
+                            </span>
+                        </div>
+
+                        <div class="bar-wrapper">
+                            <div 
+                                class="bar"
+                                style="--bar-height: 11.5rem"
+                            ></div>
+                            <span>
+                                Seg
+                            </span>
+                        </div>
+
+                        <div class="bar-wrapper">
+                            <div 
+                                class="bar"
+                                style="--bar-height: 7.6rem"
+                            ></div>
+                            <span>
+                                Ter
+                            </span>
+                        </div>
+
+                        <div class="bar-wrapper">
+                            <div 
+                                class="bar"
+                                style="--bar-height: 15.9rem"
+                            ></div>
+                            <span>
+                                Qua
+                            </span>
+                        </div>
+
+                        <div class="bar-wrapper">
+                            <div 
+                                class="bar"
+                                style="--bar-height: 12.9rem"
+                            ></div>
+                            <span>
+                                Qui
+                            </span>
+                        </div>
+
+                        <div class="bar-wrapper">
+                            <div 
+                                class="bar"
+                                style="--bar-height: 12rem"
+                            ></div>
+                            <span>
+                                Sex
+                            </span>
+                        </div>
+
+                        <div class="bar-wrapper">
+                            <div 
+                                class="bar"
+                                style="--bar-height: 6.9rem"
+                            ></div>
+                            <span>
+                                Sab
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
