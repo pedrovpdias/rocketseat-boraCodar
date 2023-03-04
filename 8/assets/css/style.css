@@ -51,7 +51,14 @@ body {
     color: white;
     line-height: 160%;
 
-    gap: 3.2rem
+    gap: 3.2rem;
+    transition: all .2s ease-in-out;
+}
+
+.box:hover {
+    background: rgba(69, 67, 87, 1);
+    transform: scale(1.02);
+    box-shadow: .3rem .4rem 2.6rem rgba(50, 50, 50, 0.25);
 }
 
 .nps {
@@ -214,7 +221,46 @@ body {
     justify-items: center;
     gap: .5rem;
 
+    padding: 1rem 0.5rem;
+
     grid-template-rows: 16rem 1.6rem;
+    transition: all 0.3s ease-in-out;
+    position: relative;    
+}
+
+.bars .bar-wrapper:hover {
+    background: rgba(255,255,255, 0.075);
+    transform: scale(1.08);
+}
+
+.bars .bar-wrapper:hover::after {
+    content: var(--content);
+    
+    background-color: #292738;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+    border: 1px solid rgba(255,255,255, 0.03);
+    border-radius: 0;
+
+    width: fit-content;
+    min-width: 30px;
+    height: 15px;
+    
+    padding: .3rem .5rem;
+    line-height: normal;
+
+    opacity: 0.9;
+
+    text-align: center;
+    font-size: 1.2rem;
+    
+    position: absolute;
+    z-index: 2;
+
+    top: calc(50% - 14px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: all 0.2s ease-in-out;
 }
 
 .bars .bar-wrapper .bar {
