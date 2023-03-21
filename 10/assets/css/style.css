@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+    --light-purple: #c2b7f4;
+    --highlight-purple: #e7e6fb
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Lato', sans-serif;
+}
+
+main {
+    background: url(../images/background.jpg) no-repeat center/cover;
+    min-height: 100vh;
+
+    display: grid;
+    place-content: center;
+    gap: 2.4rem;
+}
+
+section {
+    background: #6d67d0;
+    backdrop-filter: blur(1rem);
+    border-radius: 1rem;
+}
+
+.temperature-now {
+    background: url(../images/bg-temp-now.png) center/cover;
+
+    position: relative;
+
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+}
+
+.temperature-now::before {
+    content: '';
+    width: 17.6rem;
+    height: 17.6rem;
+
+    background: url('../images/svg/clouds.svg');
+
+    position: absolute;
+    top: -5.6rem;
+    left: -5.6rem;
+}
+
+.temperature-now .location {
+    justify-self: end;
+    padding: 3.2rem 3.2rem 0;
+
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.temperature-now .location strong {
+    font-size: 1.4rem;
+    color: var(--light-purple)
+}
+
+.temperature-now .temp {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    margin: 6rem;
+
+    font-weight: 700;
+}
+
+.temperature-now .temp .number {
+    text-align: center;
+    color: white;
+    font-size: 8.8rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.temperature-now .temp .number .max-min {
+    font-size: 2rem;
+}
+
+.temperature-now .temp .number .max-min span {
+    color: var(--light-purple);
+}
+
+.temperature-now .temp .celsius {
+    font-size: 2.4rem;
+    color: #dad8f7;
+
+    margin-top: 1.5rem;
+}
+
+.temperature-now .statistics {
+    display: flex;
+    gap: .8rem;
+    padding: 1.2rem;
+}
+
+.temperature-now .statistics .stats {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    flex: 1;
+    padding: 1.2rem 1.6rem;
+    background: rgba(102, 96, 200, 0.6);
+    border-radius: .6rem;
+}
+
+.temperature-now .statistics .info {
+    color: var(--highlight-purple);
+
+}
+
+.temperature-now .statistics .info p,
+.temperature-now .statistics .info h5 span {
+    font-size: 1.2rem;
+}
+
+.temperature-now .statistics .info h5 {
+    display: flex;
+    font-size: 1.8rem;
+    align-items: baseline;
+    gap: 0.4rem
+}
+
+.air-quality {
+    display: grid;
+
+    font-weight: 700;
+    text-align: center;
+}
+
+.air-quality .quality {
+    margin-top: 3.2rem;
+    font-size: 1.8rem;
+
+}
+
+.air-quality > .number {
+    margin-top: 0.4rem;
+    font-size: 4rem;
+    color: var(--highlight-purple);
+}
+
+.good {
+    color: #87ebcd
+}
+
+h2.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    margin-top: 3.2rem;
+    font-size: 1.6rem;
+
+    color: var(--highlight-purple);
+}
+
+.air-quality .info {
+    display: flex;
+    align-items: center;
+
+    padding: 0 1.6rem 1.6rem;
+}
+
+.air-quality .info .number {
+    flex: 1;
+}
+
+.air-quality .info p {
+    font-size: 1.4rem;
+}
+
+.air-quality .info small {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--highlight-purple);
+}
+
+.sun-time {}
+
+.sun-time .sun-chart-wrapper {
+    margin-top: 4rem;
+    height: 11rem;
+}
+
+.sun-time .sun-chart-wrapper .sun-chart {
+    margin: auto;
+    width: 21.6rem;
+    height: 21.6rem;
+
+    position: relative;
+}
+
+.sun-time .sun-chart-wrapper .sun-chart::before {
+    content: '';
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    background: #f6c833;
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+    margin: -0.6rem;
+    transform: rotate(-180deg) translate(10.6rem);
+}
