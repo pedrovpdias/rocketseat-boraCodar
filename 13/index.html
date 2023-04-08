@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        #boraCodar - Desafio 13: Página de Checkout | Rocketseat
+    </title>
+</head>
+<body>
+    <form action="">
+        <section id="credit-card">
+            <div class="front"></div>
+            <div class="back"></div>
+        </section>
+
+        <section class="inputs flex">
+            <div class="input-wrapper">
+                <label for="cc-number">
+                    Número do cartão
+                </label>
+
+                <input 
+                    type="text" 
+                    name="" 
+                    id="cc-number"
+                    placeholder="**** **** **** ****"
+                >
+            </div>
+
+            <div class="input-wrapper">
+                <label for="cc-holder">
+                    Número do titular
+                </label>
+
+                <input 
+                    type="text" 
+                    name="" 
+                    id="cc-holder"
+                    placeholder="Nome como está no cartão"
+                    required
+                >
+                <div class="warning flex">
+                    <img 
+                        src="./assets/images/warning.svg" 
+                        alt="Ícone de alerta"
+                    >
+                    Nome do titular é obrigatório
+                </div>
+            </div>
+
+            <div class="col-2 flex">
+                <div class="input-wrapper">
+                    <label for="cc-validity">
+                        Validade
+                    </label>
+                    <input 
+                        type="text" 
+                        name="" 
+                        id="cc-validity"
+                        placeholder="mm/aa"
+                    >
+                </div>
+
+                <div class="input-wrapper">
+                    <label 
+                        for="cc-cvv"
+                        class="flex help"
+                    >
+                        CVV
+                        <img 
+                            src="./assets/images/question.svg" 
+                            alt="Ícone de ajuda"
+                            title="Esse número está, geralmente, nas costas do seu cartão"
+                        >
+                    </label>
+
+                    <input 
+                        type="text" 
+                        name="" 
+                        id="cc-cvv"
+                        placeholder="***"
+                    >
+                </div>
+            </div>
+        </section>
+        
+        <section class="info-security flex">
+            <img 
+                src="./assets/images/shield-check.svg" 
+                alt="Ícone de segurança"
+            >
+            Seus dados estão seguros
+        </section>
+
+        <button type="submit">
+            Adicionar cartão
+        </button>
+    </form>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>
