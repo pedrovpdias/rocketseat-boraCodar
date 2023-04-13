@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoohing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: 'Titillium Web', sans-serif;
+    --gray-900: #0F172A;
+    --gray-800: #1E293B;
+    --gray-200: #E2E8F0;
+    --purple-100: #996DFF
+}
+
+body {
+    display: grid;
+    place-content: center;
+    
+    min-height: 100vh;
+    background-color: #F8FAFC;
+}
+
+body, button {
+    font-size: 1.6rem;
+}
+
+#app {
+    display: grid;
+    gap: 2.4rem;
+    
+    margin: 4.8rem auto;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 2.4rem;
+    width: 32rem;
+    height: fit-content;
+
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 1rem;
+
+    transition: .1s;
+}
+
+.box:hover {
+    border-color: var(--purple-100);
+}
+
+.box.ultimate {
+    background: var(--gray-900);
+    position: relative;
+    margin-top: 1.7rem;
+}
+
+.box .box-header {
+    display: grid;
+    gap: .8rem;
+}
+
+.box .box-header .title {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #7C3AED;
+    text-transform: uppercase;    
+    letter-spacing: .1rem;
+}
+
+.box.ultimate .box-header .title {
+    color: var(--purple-100);
+}
+
+.box .box-header .package {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box .box-header .package h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--gray-800);
+}
+
+.box.ultimate .box-header .package h1 {
+    color: #F8FAFC;
+}
+
+.box .box-header .package .price-wrapper {
+    font-size: 1.8rem;
+}
+
+.box.ultimate .box-header .package .price-wrapper {
+    color: #F8FAFC;
+}
+
+.box .box-header .package .price-wrapper span {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.box button {
+    padding: 1.6rem 2.4rem;
+
+    background: white;
+
+    color: var(--gray-800);
+    font-weight: 700;
+
+    border: 1px solid var(--gray-800);
+    border-radius: .4rem;
+
+    transition: .1s;
+}
+
+.box button:hover,
+.box button:focus {
+    background: var(--gray-800);
+    color: white;
+}
+
+
+.box.ultimate button {
+    background: var(--purple-100);
+    color: white;
+}
+
+.box.ultimate button:hover,
+.box.ultimate button:focus {
+    background: #7C3AED;
+}
+
+.box ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    border-top: 1px solid var(--gray-200);
+    padding-top: 3.2rem;
+
+    list-style: none;
+}
+
+.box ul li {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    gap: 1rem .8rem;
+
+    color: #475569;
+    letter-spacing: .1rem;
+}
+
+.box.ultimate ul li {
+    color: #CBD5E1;
+}
+
+.box ul li::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url('../images/svg/check.svg') no-repeat;
+}
+
+.box.essentials ul li::after,
+.box.ultimate ul li::after {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    background: url('../images/svg/info.svg');
+}
+
+.box.ultimate .highlight {  
+    padding: .8rem 1.6rem;
+    background: #FBA94C;
+    border-radius: .6rem;
+    width: fit-content;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    text-transform: uppercase;
+
+    position: absolute;
+    top: -1.8rem;
+    left: 9.3rem;
+    letter-spacing: .1rem;
+}
+
+@media(min-width: 1240px) {
+    #app {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3.2rem;
+        padding: 0;
+    }
+
+    .box {
+        gap: 3.2rem;
+        padding: 4.8rem 3.2rem 3.2rem;
+        
+        width: 38.4rem;
+        height: 45.4rem;
+    }
+
+    .box .box-header .package h1 {
+        font-size: 3.2rem;
+    }
+
+    .box .box-header .package .price-wrapper span {
+        font-size: 2.4rem;
+    }
+
+    .box.ultimate {
+        margin-top: 0;
+    }
+
+    .box.ultimate .highlight {   
+        left: 12.5rem;
+    }
+}
